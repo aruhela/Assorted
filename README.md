@@ -1,6 +1,4 @@
 # Assorted
-K-Means Clustering 
-This repository contain my implementation of K-Means algorithm that is optimized for finding cluster of geographical locations. Both the Source Code and Outputs of running the source code with 50000 and 4 Million locations is included in the repository. The details of my algorithm, contributions, limitation and results of the algorithm are specified in the Readme.txt file.
 
 # Assorted/Bitly
 The limitation on length of tweets compels user to shorten URLs in their tweets. I have used a python script to resolve short URLs to their extended form. Nearly 2 Million URLs were parsed by this Python script. 
