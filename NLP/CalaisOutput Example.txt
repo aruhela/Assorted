@@ -1,0 +1,54 @@
+Tweet :The office of Serbian President Boris Tadic today said he will attend the 10th anniversary of the massacre of Bosnian Muslims by Serbian troops.
+
+OpenCalais Result
+<Results>
+	<Entity type="Position" name="President" relevance="0.667">
+		<appear>President</appear>
+	</Entity>
+	<Entity type="Person" name="Boris Tadic" relevance="0.762">
+		<appear>Boris Tadic</appear>
+		<appear>he</appear>
+	</Entity>
+	<SocialTags>
+		<SocialTag importance="2">
+			Serbia
+			<originalValue>Serbia</originalValue>
+		</SocialTag>
+		<SocialTag importance="2">
+			European people
+			<originalValue>European people</originalValue>
+		</SocialTag>
+		<SocialTag importance="2">
+			Bosnian Genocide
+			<originalValue>Bosnian Genocide</originalValue>
+		</SocialTag>
+		<SocialTag importance="2">
+			Tadic
+			<originalValue>Tadic</originalValue>
+		</SocialTag>
+		<SocialTag importance="2">
+			Serbs in Kosovo
+			<originalValue>Serbs in Kosovo</originalValue>
+		</SocialTag>
+		<SocialTag importance="2">Politics</SocialTag>
+		<SocialTag importance="1">
+			Boris Tadic
+			<originalValue>Boris Tadic</originalValue>
+		</SocialTag>
+		<SocialTag importance="1">
+			Politics
+			<originalValue>Politics</originalValue>
+		</SocialTag>
+		<SocialTag importance="1">
+			Serbian people
+			<originalValue>Serbian people</originalValue>
+		</SocialTag>
+		<SocialTag importance="1">War_Conflict</SocialTag>
+		<SocialTag importance="1">Religion_Belief</SocialTag>
+	</SocialTags>
+	<Topics>
+		<Topic Taxonomy="Calais" Score="1.000">War_Conflict</Topic>
+		<Topic Taxonomy="Calais" Score="0.959">Religion_Belief</Topic>
+		<Topic Taxonomy="Calais" Score="0.692">Politics</Topic>
+	</Topics>
+</Results>
