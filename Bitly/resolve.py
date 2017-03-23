@@ -1,37 +1,32 @@
-# The program expends the short URLs of Bitly to Long URLs
-# Author : Amit Ruhela
 import re
-import urllib
+import urllib.request
 import string
-
-#the source file of the tweets to be resolved
+#the source file of the tweets to be resolved !
 inputFile = 'SrcFile.txt'
 
-#the output file of the tweets resolved
-outputFile ='ResolvedUrlsFile'
+#the output file of the tweets resolved !
+outputFile ='resolvedTweets.txt'
 
-
-#the Mapping  of the URLS tweets resolved so far
+#the Mapping  of the URLS tweets resolved so far!
 resolvedMapping ='mapping'
+
 Mapping = {'short': 'longurl'}
 
 fmap = open(resolvedMapping,'a')
-fout = open(outputFile,'a')
+fout = open(outputFile,'w')
+
 
 def resolveUrl() :
     repeaturl =0
-    nourl     =0
+    NotValidURL =0
     newurl    =0
-    
     f = open(inputFile)
-    line = f.readline();
-    data = line;
+    url = f.readline();
 
-    while line:
-      line = re.split('-|||-',line)
-      url = line[6]
+    while url:
       url = url.replace('"','')
-      data = data.replace('\n','')
+      url = url.replace('\n','');
+#      print(url+"");
       response =''
       
       try :
@@ -40,21 +35,25 @@ def resolveUrl() :
                   response = Mapping.get(url)
                   repeaturl = repeaturl +1
                else :
-                  response = urllib.urlopen(url)
+                  response = urllib.request.urlopen(url)
                   response = response.geturl()
-                  Mapping[url] = response
+                  Mapping[url] =response
                   newurl = newurl +1
                   fmap.write(url+'\t'+response+'\n')  
             else :
                response = 'none'
-               nourl = nourl +1
+               NotValidURL = NotValidURL +1
       except :
-            response = 'none'
-            return
-      
-      fout.write(data+"-|||-"+response+'\n')
-      line = f.readline()
-      data = line
+            print("Unexpected error")	  
+            response = 'UnexpectedError'
+                  
+      print(url+"\t"+response+'\n\n')
+      fout.write(url+"\t"+response+'\n')
+      url = f.readline()
+
+    # Write Stats	  
+    print('repeat : newurl : NotValidURL',repeaturl,newurl,NotValidURL)
+
 
 resolveUrl()
 
